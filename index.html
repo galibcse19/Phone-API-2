@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api practice 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="mx-24">
+    <header>
+        <h2 class="text-center text-4xl py-10 ">Phone Hunting By Using API-2</h2>
+    </header>
+    <main>
+        <section>
+            <div class="my-10">
+                <input id="inputField" type="text" placeholder="Type here : iphone or samsung or oppo"
+                    class="input input-bordered input-secondary w-full max-w-xs" />
+                <button onclick="SrcNow()" class="btn btn-outline btn-secondary">Search Your Phone</button>
+            </div>
+        </section>
+        <section>
+            <div id="spinner" class="text-center hidden">
+                <span class="loading loading-spinner text-secondary"></span>
+            </div>
+        </section>
+        <section>
+            <div id="mainContainer" class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+                <!-- <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                        <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes"
+                            class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h2 class="card-title">Shoes!</h2>
+                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+        <div id="conditionBtn" class="my-6 hidden">
+            <button onclick="showAll()" class="btn btn-outline btn-secondary">Search More Phone</button>
+        </div>
+        <section>
+            <!-- You can open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="show_modal.showModal()">open modal</button> -->
+            <dialog id="show_modal" class="modal">
+                <div class="modal-box">
+                    <form method="dialog">
+                        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                    </form>
+                     <section>
+                        <div id="ModalShowValue">
+
+                        </div>
+                     </section>
+                </div>
+            </dialog>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    
+
+
+    <script src="JS/api.js"></script>
+</body>
+</html>
